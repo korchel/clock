@@ -1,0 +1,10 @@
+.digit {
+  svg {
+    fill: #401520;
+    .on {
+      fill: #eaf7f7;
+      filter: drop-shadow(0 0 5px #f20141) drop-shadow(0 0 10px #f20141)
+        drop-shadow(0 0 25px #f20141);
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Dot } from "../Dot/Dot";
+import { Dot } from "./Dot/Dot";
 import styles from "./Dots.module.scss";
 
 export const Dots = () => {

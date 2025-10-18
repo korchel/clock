@@ -1,6 +1,6 @@
 "use client";
 
-import { ClockDigit, Dots } from "./ui";
+import { ClockDigit, Dots, Week } from "./ui";
 import styles from "./DigitalClock.module.scss";
 import { useEffect, useState } from "react";
 
@@ -19,6 +19,7 @@ export const DigitalClock = () => {
     second: "2-digit",
   });
   const [hours, minutes, seconds] = timeString.split(":");
+  const day = new Date().getDay();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,6 +32,7 @@ export const DigitalClock = () => {
 
   return (
     <div className={styles.digital}>
+      <Week currentDay={day} />
       <ClockDigit digit={hours.split("")[0] as Digit} />
       <ClockDigit digit={hours.split("")[1] as Digit} />
       <Dots />

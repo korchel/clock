@@ -1,0 +1,20 @@
+.weekday {
+  font-family: var(--font-roboto);
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  text-shadow: 0 0 20px var(--digital-glow), 0 0 30px var(--digital-glow),
+    0 0 40px var(--digital-glow), 0 0 50px var(--digital-glow),
+    0 0 60px var(--digital-glow);
+  background: var(--digital-on); /* set fallback color */
+  background-image: radial-gradient(
+    var(--digital-on) 25%,
+    var(--digital-off) 80%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}

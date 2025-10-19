@@ -1,0 +1,10 @@
+.off {
+  fill: var(--digital-off);
+}
+
+.on {
+  fill: var(--digital-on);
+  filter: drop-shadow(0 0 5px var(--digital-glow))
+    drop-shadow(0 0 10px var(--digital-glow))
+    drop-shadow(0 0 25px var(--digital-glow));
+}

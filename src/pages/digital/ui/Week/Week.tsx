@@ -6,6 +6,7 @@ interface Props {
   currentDay: number;
 }
 export const Week = ({ currentDay }: Props) => {
+  console.log("Week rendered");
   return (
     <div className={styles.week}>
       {Object.entries(weekDays).map(([day, number]) => (

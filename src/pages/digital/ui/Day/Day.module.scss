@@ -1,0 +1,30 @@
+.date {
+  display: flex;
+  height: 100px;
+}
+
+.one {
+  height: 100px;
+  width: 66px;
+}
+
+.dateDigit {
+  height: 100px;
+  width: 66px;
+  font-family: var(--font-roboto);
+}
+
+.d {
+  &::after {
+    content: "DAY";
+    color: white;
+    font-weight: bolder;
+  }
+}
+.m {
+  &::after {
+    content: "MONTH";
+    color: rgb(230, 230, 230);
+    font-weight: bolder;
+  }
+}

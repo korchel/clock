@@ -1,0 +1,42 @@
+.glass {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  z-index: 10;
+}
+
+.ball {
+  background-color: #f21a12;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.digit {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  font-family: var(--font-poppins);
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  transform: rotate(calc(30deg * var(--number))) translateY(-200px)
+    rotate(calc(-30deg * var(--number)));
+}

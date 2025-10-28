@@ -15,6 +15,7 @@ export const AnalogueClock = () => {
         ))}
       </div>
       <div className={styles.ball}></div>
+      <div className={styles.secondHand}></div>
     </>
   );
 };

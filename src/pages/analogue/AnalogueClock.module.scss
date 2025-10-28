@@ -1,5 +1,5 @@
 .glass {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -39,4 +39,27 @@
   font-size: 20px;
   transform: rotate(calc(30deg * var(--number))) translateY(-200px)
     rotate(calc(-30deg * var(--number)));
+}
+
+.secondHand {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 180px;
+    top: -10px;
+    left: 7px;
+    background-color: white;
+    z-index: 10;
+  }
 }

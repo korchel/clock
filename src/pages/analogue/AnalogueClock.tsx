@@ -1,6 +1,12 @@
+"use client";
+
+import { useTime } from "@/shared";
 import styles from "./AnalogueClock.module.scss";
+import { HourHand, SecondHand } from "./ui";
 
 export const AnalogueClock = () => {
+  const { hours, seconds } = useTime();
+
   return (
     <>
       <div className={styles.glass}>
@@ -13,9 +19,10 @@ export const AnalogueClock = () => {
             {digit}
           </div>
         ))}
+        <SecondHand seconds={+seconds} className={styles.hand} />
+        <HourHand hours={+hours} className={styles.hand} />
       </div>
       <div className={styles.ball}></div>
-      <div className={styles.secondHand}></div>
     </>
   );
 };

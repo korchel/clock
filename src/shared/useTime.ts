@@ -21,7 +21,7 @@ export const useTime = () => {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  });
 
-  return [hours, minutes, seconds];
+  return { hours, minutes, seconds };
 };

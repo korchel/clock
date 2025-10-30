@@ -1,2 +1,2 @@
-export { SecondHand } from "./SecondHand/SecondHand";
-export { HourHand } from "./HourHand/HourHand";
+export { Hand } from "./Hand/Hand";
+export { ClockFace } from "./ClockFace/ClockFace";

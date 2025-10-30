@@ -2,25 +2,22 @@
 
 import { useTime } from "@/shared";
 import styles from "./AnalogueClock.module.scss";
-import { HourHand, SecondHand } from "./ui";
+import { ClockFace, Hand } from "./ui";
 
 export const AnalogueClock = () => {
-  const { hours, seconds } = useTime();
+  const { hours, seconds, minutes } = useTime();
 
   return (
     <>
       <div className={styles.glass}>
-        {Array.from({ length: 12 }, (_, i) => i + 1).map((digit) => (
-          <div
-            className={styles.digit}
-            style={{ ["--number" as string]: digit }}
-            key={digit}
-          >
-            {digit}
-          </div>
-        ))}
-        <SecondHand seconds={+seconds} className={styles.hand} />
-        <HourHand hours={+hours} className={styles.hand} />
+        <ClockFace />
+        <Hand angle={+seconds * 6} className={styles.hand} type="seconds" />
+        <Hand
+          angle={+hours * 30 + +minutes * 0.5}
+          className={styles.hand}
+          type="hours"
+        />
+        <Hand angle={+minutes * 6} className={styles.hand} type="minutes" />
       </div>
       <div className={styles.ball}></div>
     </>

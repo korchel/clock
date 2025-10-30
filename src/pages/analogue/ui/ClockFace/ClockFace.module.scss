@@ -1,0 +1,16 @@
+.digit {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  font-family: var(--font-poppins);
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  transform: rotate(calc(30deg * var(--number))) translateY(-200px)
+    rotate(calc(-30deg * var(--number)));
+}

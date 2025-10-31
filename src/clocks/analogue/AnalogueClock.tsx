@@ -2,7 +2,7 @@
 
 import { useTime } from "@/shared";
 import styles from "./AnalogueClock.module.scss";
-import { ClockFace, Hand } from "./ui";
+import { Ball, ClockFace, Hand } from "./ui";
 
 export const AnalogueClock = () => {
   const { hours, seconds, minutes } = useTime();
@@ -19,7 +19,9 @@ export const AnalogueClock = () => {
         />
         <Hand angle={+minutes * 6} className={styles.hand} type="minutes" />
       </div>
-      <div className={styles.ball}></div>
+      <Ball />
+      <Ball color="green" />
+      <Ball color="white" />
     </>
   );
 };

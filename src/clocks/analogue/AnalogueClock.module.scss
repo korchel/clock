@@ -6,6 +6,17 @@
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(3px);
   z-index: 2;
+}
+
+.cog {
+  position: relative;
+  x: 0;
+  y: 0;
+}
+
+.cog1 {
+  x: 200px;
+  y: 70%;
 }

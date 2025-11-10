@@ -8,7 +8,12 @@ export const AnalogueClock = () => {
   const { hours, seconds, minutes } = useTime();
 
   return (
-    <>
+    <div className={styles.analogue}>
+      <div className={styles.cogs}>
+        <Cogwheel17 className={styles.cog1} />
+        <Cogwheel12 className={styles.cog} />
+      </div>
+
       <div className={styles.glass}>
         <ClockFace />
         <Hand angle={+seconds * 6} className={styles.hand} type="seconds" />
@@ -19,9 +24,6 @@ export const AnalogueClock = () => {
         />
         <Hand angle={+minutes * 6} className={styles.hand} type="minutes" />
       </div>
-
-      <Cogwheel17 className={styles.cog1} />
-      <Cogwheel12 className={styles.cog} />
-    </>
+    </div>
   );
 };

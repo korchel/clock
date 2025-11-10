@@ -1,6 +1,12 @@
-.glass {
+.analogue {
   position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.glass {
   height: 500px;
   width: 500px;
   border-radius: 50%;
@@ -10,13 +16,20 @@
   z-index: 2;
 }
 
+.cogs {
+  position: absolute;
+  width: 750px;
+  left: -20%;
+}
+
 .cog {
-  position: relative;
-  x: 0;
-  y: 0;
+  display: block;
+  position: absolute;
+  top: 62px;
+  left: 390px;
+  transform: rotate(15deg);
 }
 
 .cog1 {
-  x: 200px;
-  y: 70%;
+  display: block;
 }

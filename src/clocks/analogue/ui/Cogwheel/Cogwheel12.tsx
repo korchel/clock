@@ -4,11 +4,11 @@ export const Cogwheel12 = ({ className }: { className: string }) => {
   return (
     <>
       <svg
-        width="200"
-        height="200"
+        width="300"
+        height="300"
         viewBox="0 0 237 237"
         strokeWidth="2"
-        className={`${className} ${styles.green}`}
+        className={`${className} ${styles.red}`}
       >
         <g transform="translate(-133, -195) ">
           <path d="M162.16 319.83L133.51 339.1" />

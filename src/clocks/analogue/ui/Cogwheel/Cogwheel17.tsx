@@ -1,26 +1,33 @@
 import { motion } from "motion/react";
 
 import styles from "./Cogwheel.module.scss";
+import { Filter } from "./Filter";
 
-export const Cogwheel17 = ({ className }: { className: string }) => {
+interface Props {
+  className: string;
+}
+export const Cogwheel17 = ({ className }: Props) => {
   return (
     <>
       <motion.svg
+        animate={{ rotate: 360 / 17 }}
+        transition={{
+          type: "tween",
+          duration: 1,
+          repeat: Infinity,
+        }}
         width="424.5"
         height="424.5"
         viewBox="0 0 317 317"
         strokeWidth="2"
         className={`${className} ${styles.green}`}
       >
+        <defs>
+          <Filter />
+        </defs>
         <g transform="translate(-340, -155) ">
-          <motion.path
-            initial={{
-              pathLength: 0,
-            }}
-            animate={{
-              pathLength: 1,
-              transition: { duration: 10, ease: "easeInOut" },
-            }}
+          <path
+            filter="url(#glow)"
             d="M588.56 222.36L588.23 223.69
          M588.23 223.69L588.19 225.06
          M588.19 225.06L588.46 226.4

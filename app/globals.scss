@@ -22,6 +22,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
+  overflow: hidden;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
